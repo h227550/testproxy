@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    res.send("Hello World!!!!!!!");
+    res.redirect('https://testdeploy-blush.vercel.app/public/cs/charging');
 });
 
 app.post("/public/cs/test", (req, res) => {
@@ -206,7 +206,7 @@ app.post("/altapay/:id", (req, res) => {
     let headers = new Headers();
     headers.append('Authorization', 'Basic ' + bufferUsername);
     console.log("username", bufferUsername);
-    const backendUrl = `https://testgateway.altapaysecure.com/merchant/API/createPaymentRequest?terminal=Wattif Test Shop Test Terminal&shop_orderid=${req.params.id}&amount=5&currency=EUR&config[callback_ok]=https://testdeploy-blush.vercel.app/public/cs/charging`;
+    const backendUrl = `https://testgateway.altapaysecure.com/merchant/API/createPaymentRequest?terminal=Wattif Test Shop Test Terminal&shop_orderid=${req.params.id}&amount=5&currency=EUR&config[callback_ok]=https://quaint-ray-bonnet.cyclic.app/`;
         fetch(backendUrl, {
             method: 'POST',
             headers: headers,
