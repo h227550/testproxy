@@ -76,7 +76,7 @@ app.get("/chargepoint/fullinfo/:physicalRef", (req, res) => {
                     name: locationData.name.en,
                     detailed_description: locationData.detailed_description.en,
                     address: locationData.address.en,
-                    thumbnail: "ok"//locationData.location_image.thumbnail ?? 
+                    thumbnail: "testtest"//locationData.location_image.thumbnail ?? 
                 }            
                 return {
                     ...result,
